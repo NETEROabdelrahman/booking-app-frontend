@@ -1,7 +1,5 @@
 import "./reserve.css";
-//import useFetch from "../../hooks/useFetch";
-import { useContext, useEffect, useState } from "react";
-//import { SearchContext } from "../../context/SearchContext";
+import {  useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -9,16 +7,12 @@ import { fetchHotelsRooms } from "../../reducers/roomsReducer";
 
 const Reserve = ({ setOpen, hotelId,dates }) => {
   const data = useSelector(store => store.hotelsRooms)
-  console.log(data.rooms)
   const dispatch = useDispatch()
 
   useEffect(() => {
     dispatch(fetchHotelsRooms(hotelId))
   },[dispatch,hotelId])
   const [selectedRooms, setSelectedRooms] = useState([]);
-  console.log(selectedRooms)
-  //const { data, loading, error } = useFetch(`/hotels/room/${hotelId}`);
-  //const { dates } = useContext(SearchContext);
 
     
     
@@ -39,7 +33,7 @@ const Reserve = ({ setOpen, hotelId,dates }) => {
   };
 
   const alldates = getDatesInRange(dates.startDate, dates.endDate);
-  console.log(alldates)
+
   const isAvailable = (roomNumber) => {
     const isFound = roomNumber.unavailableDates.some((date) =>
       alldates.includes(new Date(date).getTime())

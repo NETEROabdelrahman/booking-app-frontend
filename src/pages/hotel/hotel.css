@@ -75,6 +75,7 @@
   
   .hotelDetailsTexts {
     flex: 3;
+    padding: 10px;
   }
   
   .hotelDesc {

@@ -3,9 +3,8 @@ import { Link, useLocation } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import {useDispatch, useSelector} from 'react-redux'
 import { getTheUser } from "../../reducers/usersSlice";
-//import { AuthContext } from "../../context/AuthContext";
+
 const Navbar = () => {
-  //const location = useLocation()
   const user = useSelector(store => store.users)
   const dispatch = useDispatch()
   console.log(user.users.img)
@@ -21,7 +20,6 @@ const Navbar = () => {
     localStorage.removeItem('user')
     window.location.reload()
   }
-  //const { user } = useContext(AuthContext);
   return (
     <div className="navbar">
       <div className="navContainer">

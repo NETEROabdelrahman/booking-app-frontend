@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     position: relative;
-    
+    padding: 10px;
   }
   
   .headerContainer {
@@ -30,6 +30,9 @@
     }
     .headerSearchItem {
       gap: 0px;
+    }
+    .headerSearch{
+      left: 0;
     }
   }
   
@@ -86,14 +89,16 @@
   .headerSearchInput {
     border: none;
     outline: none;
+    width: 86px;
   }
   
   .headerSearchText {
     color: lightgray;
     cursor: pointer;
+    font-size: 13px;
   }
   .rdrCalendarWrapper{
-    left: 13%;
+    left: 7%;
   }
   
   .date {
@@ -111,6 +116,7 @@
     border-radius: 5px;
     -webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
     box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+    left: 86px;
   }
   
   .optionItem {

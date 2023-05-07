@@ -1,15 +1,12 @@
-//import useFetch from "../../hooks/useFetch";
 import { useDispatch, useSelector } from "react-redux";
 import "./propertyList.css";
 import { useEffect } from "react";
 import { fetchHotelsByType } from "../../reducers/fetchHotelsByTypeSlice";
 
 const PropertyList = () => {
-  //const { data, loading, error } = useFetch("/hotels/countByType");
  
   
   const hotels = useSelector(store => store.hotelsType)
-  console.log(hotels)
   const dispatch = useDispatch()
 
   useEffect(() => {

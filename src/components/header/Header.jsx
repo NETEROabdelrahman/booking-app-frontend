@@ -12,15 +12,7 @@ import { fetchOneHotel } from "../../reducers/fetchOneHotelReducer";
   //import { AuthContext } from "../../context/AuthContext";
   
 const Header = ({ type }) => {
-    
-  const hotel = useSelector(store=>store.oneHotel)
-  const dispatch = useDispatch()
-  //const { data, loading, error } = useFetch(`/hotels/find/${id}`);
-  //const { user } = useContext(AuthContext);
   
-  console.log(hotel)
-  //const { dates, options } = useContext(SearchContext);
-
     const [destination, setDestination] = useState("");
     const [openDate, setOpenDate] = useState(false);
     const [dates, setDates] = useState([
@@ -38,7 +30,7 @@ const Header = ({ type }) => {
     });
   
     const navigate = useNavigate();
-    //const { user } = useContext(AuthContext);
+    
       const user = true;
   
   
@@ -51,7 +43,7 @@ const Header = ({ type }) => {
       });
     };
   
-    //const { dispatch } = useContext(SearchContext);
+    
   
   const handleSearch = () => {
     
@@ -104,7 +96,7 @@ const Header = ({ type }) => {
                 <i className="fa-solid fa-bed headerIcon"></i>
                   <input
                     type="text"
-                    placeholder="Where are you going?"
+                    placeholder="search city"
                     className="headerSearchInput"
                     onChange={(e) => setDestination(e.target.value)}
                   />
